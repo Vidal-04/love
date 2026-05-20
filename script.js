@@ -98,9 +98,63 @@ document.addEventListener('touchmove', (e) => {
 
 const popupOverlay = document.getElementById('popup');
 const popupClose = document.querySelector('.popup-close');
+const popupMsg = document.querySelector('.popup-msg');
+const popupSub = document.querySelector('.popup-sub');
+const popupCounter = document.querySelector('.popup-counter');
+
+const logoutWarnings = [
+  {
+    msg: 'Please do not do this',
+    sub: 'you’ll regret it. you know you will.',
+    close: 'ok fine, i’ll stay 🌷'
+  },
+  {
+    msg: 'Seriously, don’t click that again.',
+    sub: 'I’m trying to keep this relationship alive.',
+    close: 'okay, i’m staying'
+  },
+  {
+    msg: 'One more click and I’m going to get dramatic.',
+    sub: 'Please, just let this one be a good decision.',
+    close: 'i promise, i’ll stay'
+  },
+  {
+    msg: 'This is getting real. Please stop.',
+    sub: 'I don’t want to be that clingy, but also... don’t.',
+    close: 'fine, no more'
+  },
+  {
+    msg: 'No way! I won’t stop.',
+    sub: 'If you still want out, it is up to you.',
+    close: 'I’ll stay... for now'
+  },
+  {
+    msg: 'FINAL WARNING',
+    sub: 'Something bad will happen if you click again.',
+    close: 'I’ll stay'
+  },
+  {
+    msg: 'SIKE!',
+    sub: 'I won’t stop <3!',
+    close: 'I’ll stay forever'
+  }
+];
+let logoutClickCount = 0;
+
+function updateLogoutPopup() {
+  const index = (logoutClickCount - 1) % logoutWarnings.length;
+  const warning = logoutWarnings[index];
+
+  popupMsg.textContent = warning.msg;
+  popupSub.textContent = warning.sub;
+  popupClose.textContent = warning.close;
+  popupCounter.textContent = `Clicked logout ${logoutClickCount} time${logoutClickCount === 1 ? '' : 's'}.`;
+}
 
 function handleLogout(e) {
   e.preventDefault();
+  logoutClickCount += 1;
+  updateLogoutPopup();
   popupOverlay.classList.add('show');
 }
 
