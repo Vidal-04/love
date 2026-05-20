@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- ========= REPLACE THESE WITH YOUR OWN OG META ========= -->
+  <meta property="og:title" content="⚠️ PLEASE DO NOT FUMBLE ⚠️" />
+  <meta property="og:description" content="my love for you." />
+  <meta property="og:image" content="YOUR_THUMBNAIL_IMAGE_URL_HERE" />
+  <meta property="og:type" content="website" />
+  <!-- ======================================================== -->
+
+  <title>⚠️ WARNING: PLEASE DO NOT FUMBLE ⚠️</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Decorative frame -->
+  <div class="frame"></div>
+  <div class="corner tl">🌸</div>
+  <div class="corner tr">🌸</div>
+  <div class="corner bl">🌸</div>
+  <div class="corner br">🌸</div>
+
+  <!-- Falling petals -->
+  <div class="petals-bg" aria-hidden="true" id="petals"></div>
+
+  <!-- Main content -->
+  <main class="content">
+
+    <!-- Warning banner -->
+    <div class="warning-banner" role="alert">
+      <span class="warning-label">⚠ &nbsp; System Alert &nbsp; ⚠</span>
+      <h1 class="warning-title">PLEASE DO NOT FUMBLE!</h1>
+    </div>
+
+    <!-- =====================================================================
+         HERO IMAGE — swap this placeholder for your own image:
+           <img src="YOUR_BG_IMAGE.png" alt="hero" class="hero-img" />
+    <div class="hero-placeholder" aria-label="Replace with your hero image">
+      <span class="ph-icon">🖼️</span>
+      <span>YOUR IMAGE HERE</span>
+      <span style="font-size:0.7rem; opacity:0.6;">Replace .hero-placeholder div with &lt;img src="..."&gt;</span>
+    </div>
+         ===================================================================== -->
+
+    <!-- Heartbeat heart -->
+    <div class="heartbeat-bar" aria-hidden="true" id="hb">
+      <span class="heartbeat-heart" aria-hidden="true">❤️</span>
+    </div>
+
+    <!-- System notice -->
+    <div class="notice-card">
+      <p class="notice-title">System Notice</p>
+      <div class="notice-row">
+        <span class="notice-key">Status</span>
+        <span class="notice-val" style="color: var(--red-rose);">CRITICAL</span>
+      </div>
+      <div class="notice-row">
+        <span class="notice-key">Time remaining</span>
+        <div id="countdown">24:00:00</div>
+      </div>
+      <div class="notice-row">
+        <span class="notice-key">Location</span>
+        <span class="notice-val missing">missing</span>
+      </div>
+      <div class="notice-row">
+        <span class="notice-key">Last contact</span>
+        <span class="notice-val missing">missing</span>
+      </div>
+      <div class="notice-row">
+        <span class="notice-key">Attempts to fix this</span>
+        <span class="notice-val missing">not found</span>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider" aria-hidden="true">
+      <span class="divider-icon">❤️</span>
+    </div>
+
+    <!-- CTA buttons -->
+    <div class="cta-group">
+
+      <!-- PRIMARY BUTTON — "Lock In" link -->
+        <a href="https://www.google.com/maps/search/date+ideas+near+me" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        ❤️ &nbsp; Lock In &nbsp; ❤️
+        </a>
+     <!-- Log Out button width placeholder so layout doesn't collapse -->
+      <div style="height: 46px;"></div>
+    </div>
+
+  </main>
+
+  
+  <!-- Log Out — floats freely -->
+  <!-- =====================================================================
+       LOG OUT LINK — replace the href="#" below with your different URL
+       ===================================================================== -->
+  <a href="#" id="btn-logout" class="btn btn-secondary">😔 &nbsp; Log Out 😔</a>
+
+    <!-- Warning popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <div class="popup-icon">💔</div>
+      <p class="popup-msg">Please do not do this</p>
+      <p class="popup-sub">you'll regret it. you know you will.</p>
+      <button class="popup-close" type="button">ok fine, i'll stay 🌷</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
