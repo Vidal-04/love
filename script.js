@@ -105,33 +105,33 @@ const popupCounter = document.querySelector('.popup-counter');
 const logoutWarnings = [
   {
     msg: 'Please do not do this',
-    sub: 'you’ll regret it. you know you will.',
-    close: 'ok fine, i’ll stay 🌷'
+    sub: 'First time?',
+    close: 'ok fine, i’ll stay.'
   },
   {
-    msg: 'Seriously, don’t click that again.',
-    sub: 'I’m trying to keep this relationship alive.',
+    msg: 'Don’t click that again.',
+    sub: 'I’m trying to keep what we have alive.',
     close: 'okay, i’m staying'
   },
   {
     msg: 'One more click and I’m going to get dramatic.',
-    sub: 'Please, just let this one be a good decision.',
-    close: 'i promise, i’ll stay'
+    sub: 'Je ne comprendre pas, POURQUOI?',
+    close: 'je resterai ici'
   },
   {
     msg: 'This is getting real. Please stop.',
-    sub: 'I don’t want to be that clingy, but also... don’t.',
-    close: 'fine, no more'
+    sub: 'If you still want out, it is up to you',
+    close: 'I promise I will stay.'
   },
   {
     msg: 'No way! I won’t stop.',
-    sub: 'If you still want out, it is up to you.',
+    sub: 'Something bad will happen if you click again.',
     close: 'I’ll stay... for now'
   },
   {
     msg: 'FINAL WARNING',
-    sub: 'Something bad will happen if you click again.',
-    close: 'I’ll stay'
+    sub: 'I got nothing else to say....',
+    close: 'I’ll stay!'
   },
   {
     msg: 'SIKE!',
